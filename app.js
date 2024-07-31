@@ -25,6 +25,7 @@ function generarUnNumeroSecreto(){
     let numSorteo = Math.floor(Math.random()*maximojuegos)+1
     console.log(numSorteo);
     console.log(listaNumSorteados);
+
     if (listaNumSorteados.length == maximojuegos) {
         asignarTexto('p',`Ya se sortearon todos los números posibles`)
     } else{
@@ -62,6 +63,7 @@ function verificarIntento(){
 function limpiarCaja(){
     let vacio = document.querySelector('#valorUsuario')
     vacio.value = ''
+    vacio.focus();
 }
 
 function reiniciarJuego(){
@@ -74,6 +76,3 @@ function reiniciarJuego(){
     // deshabilitar boton de nuevo juego
     document.querySelector('#reiniciar').setAttribute('disabled','true')
 }
-
-
-
